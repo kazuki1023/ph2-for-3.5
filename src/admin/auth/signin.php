@@ -1,9 +1,5 @@
 <?php
 session_start(); // セッションを開始
-if (isset($_SESSION['message'])) {
-  $message = $_SESSION['message'];
-  unset($_SESSION['message']); // メッセージを表示したらセッション変数を削除
-}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $email = $_POST["email"];
   $password = $_POST["password"];
